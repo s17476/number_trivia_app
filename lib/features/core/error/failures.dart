@@ -7,7 +7,7 @@ abstract class Failure extends Equatable {
 /// General failures
 class ServerFailure extends Failure {
   final List properties;
-  const ServerFailure({required this.properties}) : super(properties);
+  const ServerFailure([this.properties = const []]) : super(properties);
 
   @override
   List<Object?> get props => properties;
@@ -15,7 +15,7 @@ class ServerFailure extends Failure {
 
 class CacheFailure extends Failure {
   final List properties;
-  const CacheFailure({required this.properties}) : super(properties);
+  const CacheFailure([this.properties = const []]) : super(properties);
 
   @override
   List<Object?> get props => properties;
